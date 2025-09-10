@@ -1,10 +1,8 @@
-import React from 'react';
 import { Navigation } from './components/Navigation';
 import Hero from './components/Hero';
 import { PodcastEpisodes } from './components/PodcastEpisodes';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
-import { Breadcrumb } from './components/Breadcrumb';
 import './App.css';
 
 function App() {

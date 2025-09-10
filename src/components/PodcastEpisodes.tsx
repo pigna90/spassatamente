@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { EpisodeCard } from './EpisodeCard';
+import { useState, useEffect } from 'react';
 import { MobileEpisodeCard } from './MobileEpisodeCard';
 import { fetchRSSFeed, Episode } from '../utils/rssParser';
 import '../styles/episodes.css';
 import '../styles/mobile-episodes.css';
 
-export const PodcastEpisodes: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
+export const PodcastEpisodes = () => {
   const [allEpisodes, setAllEpisodes] = useState<Episode[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   useEffect(() => {
     const loadEpisodes = async () => {

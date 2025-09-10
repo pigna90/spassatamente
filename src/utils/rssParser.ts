@@ -114,18 +114,16 @@ const formatDate = (pubDate: string): string => {
   }
 };
 
-const extractEpisodeNumber = (title: string): number | null => {
-  // Try to extract episode number from title
-  const matches = title.match(/(?:episodio|ep\.?|#)\s*(\d+)/i);
-  return matches ? parseInt(matches[1], 10) : null;
-};
-
-const cleanTitle = (title: string): string => {
-  // Remove episode number prefixes if they exist
-  return title.replace(/^(?:episodio|ep\.?|#)\s*\d+\s*[:\-\s]*/i, '').trim();
-};
-
-const cleanDescription = (description: string): string => {
-  // Remove HTML tags and clean up description
-  return description.replace(/<[^>]*>/g, '').trim();
-};
+// Utility functions (currently unused but may be useful later)
+// const extractEpisodeNumber = (title: string): number | null => {
+//   const matches = title.match(/(?:episodio|ep\.?|#)\s*(\d+)/i);
+//   return matches ? parseInt(matches[1], 10) : null;
+// };
+//
+// const cleanTitle = (title: string): string => {
+//   return title.replace(/^(?:episodio|ep\.?|#)\s*\d+\s*[:\-\s]*/i, '').trim();
+// };
+//
+// const cleanDescription = (description: string): string => {
+//   return description.replace(/<[^>]*>/g, '').trim();
+// };

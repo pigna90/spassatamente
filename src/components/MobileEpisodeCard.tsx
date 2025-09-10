@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface Episode {
   episode_number: number;
   title: string;
@@ -14,11 +12,10 @@ interface MobileEpisodeCardProps {
   isLast?: boolean;
 }
 
-export const MobileEpisodeCard: React.FC<MobileEpisodeCardProps> = ({ 
+export const MobileEpisodeCard = ({ 
   episode, 
-  onPlay, 
-  isLast = false 
-}) => {
+  onPlay 
+}: MobileEpisodeCardProps) => {
   return (
     <div className="mobile-card" onClick={onPlay}>
       <img src={episode.imageUrl} alt="" />
