@@ -9,7 +9,7 @@ export const About: React.FC = () => {
         <div className="hosts-container">
           <div className="host-card">
             <div className="host-image">
-              <img src="/images/about/alessandro.jpg" alt="Alessandro Romano" />
+              <img src="/images/about/alessandro.jpg" alt="Alessandro Romano - Co-host del podcast Spassatamente, esperto di psicologia" />
             </div>
             <div className="host-info">
               <h3>Alessandro Romano</h3>

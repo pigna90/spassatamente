@@ -7,7 +7,14 @@ const Hero: React.FC = () => {
     <section className="hero">
       <div className="hero-content">
         <div className="logo-container">
-          <img src="/logo.png" alt="Spassatamente Logo" className="logo" />
+          <img 
+            src="/logo.png" 
+            alt="Logo Spassatamente - Podcast italiano di psicologia e neuroscienze" 
+            className="logo"
+            loading="eager"
+            width="200"
+            height="200"
+          />
         </div>
         <h1>Spaßatamente</h1>
         <p className="hero-subtitle">Un podcast a spasso nella mente.</p>

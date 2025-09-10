@@ -48,7 +48,7 @@ export const PodcastEpisodes: React.FC = () => {
   if (loading) {
     return (
       <section id="episodes-section" className="episodes-section">
-        <h2>Episodi</h2>
+        <h2>I Nostri Episodi</h2>
         <div className="loading-container">
           <div className="loading-spinner"></div>
           <p>Caricamento episodi...</p>
@@ -60,7 +60,7 @@ export const PodcastEpisodes: React.FC = () => {
   if (error || allEpisodes.length === 0) {
     return (
       <section id="episodes-section" className="episodes-section">
-        <h2>Episodi</h2>
+        <h2>I Nostri Episodi</h2>
         <div className="error-container">
           <p>Non è possibile caricare gli episodi al momento.</p>
           <button onClick={() => window.location.reload()} className="retry-button">
@@ -77,7 +77,7 @@ export const PodcastEpisodes: React.FC = () => {
 
   return (
     <section id="episodes-section" className="episodes-section">
-      <h2>Episodi</h2>
+      <h2>I Nostri Episodi</h2>
       
       {/* Featured Episode */}
       <div className="featured-episode">

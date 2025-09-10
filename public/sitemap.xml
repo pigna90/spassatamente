@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://spassatamente.com/</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://spassatamente.com/logo.png</image:loc>
+      <image:title>Spassatamente Podcast Logo</image:title>
+      <image:caption>Logo ufficiale del podcast Spassatamente</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://spassatamente.com/#about</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://spassatamente.com/images/about/alessandro.jpg</image:loc>
+      <image:title>Alessandro Romano - Host di Spassatamente</image:title>
+      <image:caption>Alessandro Romano, co-host del podcast Spassatamente</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Episodes Section -->
+  <url>
+    <loc>https://spassatamente.com/#episodes</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://spassatamente.com/#contact</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Podcast Platforms -->
+  <url>
+    <loc>https://open.spotify.com/show/34H3WSuA2XnSlFNoDKx27c</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://podcasts.apple.com/us/podcast/spa%C3%9Fatamente/id1721787067</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.youtube.com/@Spassatamente/podcasts</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>
