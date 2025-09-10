@@ -1,0 +1,108 @@
+/* Smartphone-proportional mobile cards */
+.mobile-card {
+  display: flex;
+  align-items: center;
+  padding: 4vw;
+  gap: 4vw;
+  background: white;
+  margin: 0 6vw 4vw 6vw;
+  border-radius: 3vw;
+  box-shadow: 0 1vw 2vw rgba(0,0,0,0.1);
+  min-height: 35vw;
+}
+
+.mobile-card img {
+  width: 35vw;
+  height: 35vw;
+  border-radius: 4vw;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mobile-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  min-width: 0;
+  text-align: center;
+}
+
+.mobile-date {
+  font-size: 3.5vw;
+  color: #666;
+  font-weight: 500;
+  line-height: 1.2;
+  background: rgba(0,0,0,0.03);
+  padding: 1.5vw 3vw;
+  border-radius: 10vw;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.mobile-play {
+  background: #1DB954;
+  color: white;
+  border: none;
+  padding: 4vw 8vw;
+  border-radius: 8vw;
+  font-weight: 700;
+  font-size: 5vw;
+  cursor: pointer;
+  min-height: 14vw;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2vw 4vw rgba(29, 185, 84, 0.3);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.mobile-play:active {
+  transform: scale(0.95);
+  box-shadow: 0 1vw 2vw rgba(29, 185, 84, 0.4);
+}
+
+.mobile-episodes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.mobile-last-episode-container {
+  margin-bottom: 0;
+}
+
+/* Hide desktop on mobile */
+@media (max-width: 768px) {
+  .featured-episode,
+  .episodes-list {
+    display: none;
+  }
+  
+  .mobile-episodes-section {
+    display: block;
+  }
+  
+  .mobile-episodes-section .episodes-section {
+    padding: 0;
+  }
+  
+  .episodes-section h2 {
+    margin: 4vw 6vw 2vw 6vw !important;
+    padding: 0 !important;
+  }
+}
+
+/* Hide mobile on desktop */
+@media (min-width: 769px) {
+  .mobile-episodes-section {
+    display: none;
+  }
+}

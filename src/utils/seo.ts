@@ -1,9 +1,9 @@
 // SEO utility functions
 export const generateMetaDescription = (episodeTitle?: string): string => {
   if (episodeTitle) {
-    return `Ascolta "${episodeTitle}" su Spassatamente, il podcast che esplora la mente umana attraverso psicologia, neuroscienze e riflessioni. Con Alessandro Romano e Nadja Sada.`;
+    return `Ascolta "${episodeTitle}" su Spassatamente, il podcast che esplora la mente umana attraverso psicologia, neuroscienze e riflessioni. Con Nadja Sada e Alessandro Romano.`;
   }
-  return "Spassatamente è un podcast che esplora la mente umana attraverso storie, scienza e riflessioni. Ascolta episodi su psicologia, neuroscienze e benessere mentale con Alessandro Romano e Nadja Sada.";
+  return "Spassatamente è un podcast che esplora la mente umana attraverso storie, scienza e riflessioni. Ascolta episodi su psicologia, neuroscienze e benessere mentale con Nadja Sada e Alessandro Romano.";
 };
 
 export const generatePageTitle = (section?: string): string => {
@@ -34,8 +34,8 @@ export const generateKeywords = (episodeTitle?: string): string => {
     'mente umana',
     'benessere mentale',
     'salute mentale',
-    'Alessandro Romano',
     'Nadja Sada',
+    'Alessandro Romano',
     'podcast psicologia',
     'scienza della mente',
     'riflessioni psicologiche'

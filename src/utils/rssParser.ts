@@ -35,18 +35,35 @@ export const fetchRSSFeed = async (): Promise<Episode[]> => {
         .replace(/&[^;]+;/g, ' ')
         .trim();
       
-      // Extract Spotify link from description or use the main link
-      const spotifyMatch = item.description.match(/https:\/\/[^\s"]*spotify[^\s"]*/i);
+      // Extract Spotify link from description, link, or enclosure
+      let spotifyUrl = null;
+      
+      // First try to find Spotify link in description
+      const descriptionSpotifyMatch = item.description.match(/https:\/\/[^\s"<]*spotify[^\s"<]*/i);
+      if (descriptionSpotifyMatch) {
+        spotifyUrl = descriptionSpotifyMatch[0];
+      }
+      
+      // If not found, check if the main link is a Spotify link
+      if (!spotifyUrl && item.link && item.link.includes('spotify')) {
+        spotifyUrl = item.link;
+      }
+      
+      // If still not found, check enclosure (for direct audio links)
+      if (!spotifyUrl && item.enclosure && item.enclosure.link && item.enclosure.link.includes('spotify')) {
+        spotifyUrl = item.enclosure.link;
+      }
       
       console.log(`📻 Episode ${episodeNumber}: "${item.title}"`);
       console.log(`🖼️ Image: ${item.thumbnail || data.feed.image || '/logo.png'}`);
+      console.log(`🎵 Spotify URL: ${spotifyUrl || item.link}`);
       
       return {
         episode_number: episodeNumber,
         title: item.title,
         date: formatDate(item.pubDate),
         imageUrl: item.thumbnail || data.feed.image || '/logo.png',
-        spotifyUrl: spotifyMatch ? spotifyMatch[0] : item.link,
+        spotifyUrl: spotifyUrl || item.link,
         description: cleanDescription
       };
     });
