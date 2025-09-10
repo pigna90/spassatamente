@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# Spassatamente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="public/logo.png" alt="Spassatamente Logo" width="200">
+</p>
 
-Currently, two official plugins are available:
+A React application built with TypeScript and Vite, featuring modern UI animations with Framer Motion and routing capabilities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19** with TypeScript
+- **Vite** for fast development and building
+- **Framer Motion** for animations
+- **Emotion** for styled components
+- **React Router** for navigation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Development
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## How to Modify
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Make your changes to the source code in the `src/` directory
+2. Test locally using `npm run dev`
+3. Commit and push your changes to the repository
+4. **GitHub Actions will automatically handle deployment** when changes are pushed to the main branch
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+The project is configured with automated deployment via GitHub Actions - no manual deployment steps required!
+
+## Favicon Optimization Required
+
+⚠️ **Action Needed**: The current favicon is 399KB and needs optimization for better performance.
+
+Generate optimized favicon files using [RealFaviconGenerator](https://realfavicongenerator.net/) or [Favicon.io](https://favicon.io/):
+
+- `favicon.ico` (16x16, 32x32, 48x48px) - ~5KB max
+- `favicon-16x16.png` (16x16px) - ~1KB max  
+- `favicon-32x32.png` (32x32px) - ~2KB max
+- `apple-touch-icon.png` (180x180px) - ~10KB max
+- `android-chrome-192x192.png` (192x192px) - ~10KB max
+- `android-chrome-512x512.png` (512x512px) - ~25KB max
+
+Place these files in the `public/` directory. The HTML structure is already configured to use them.
